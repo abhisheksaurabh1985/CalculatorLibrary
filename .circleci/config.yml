@@ -3,13 +3,13 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.7
+      - image: circleci/python:3.5
 
     working_directory: ~/repo
 
     steps:
       # Step 1: obtain repo from GitHub
-      - checkout https://github.com/abhisheksaurabh1985/CalculatorLibrary.git
+      - checkout
       # Step 2: create virtual env and install dependencies
       - run:
           name: install dependencies
